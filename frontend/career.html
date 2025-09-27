@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Careers - CareerAdvisor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+   <div id="navbar"></div>
+    <!-- Careers Main Content -->
+    <main class="careers-page">
+        <section class="careers-hero">
+            <div class="container">
+                <h1>Explore Career Opportunities</h1>
+                <p>Discover 500+ career paths that match your skills, interests, and personality</p>
+                <div class="search-box">
+                    <input type="text" id="career-search" placeholder="Search careers (developer, nurse, designer...)">
+                    <button onclick="searchCareers()">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="number">500+</span>
+                        <span class="label">Careers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">50+</span>
+                        <span class="label">Industries</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">95%</span>
+                        <span class="label">Match Accuracy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="careers-list">
+            <div class="container">
+                <div class="section-controls">
+                    <div class="filters">
+                        <div class="filter-group">
+                            <label for="category-filter"><i class="fas fa-filter"></i> Category:</label>
+                            <select id="category-filter">
+                                <option value="all">All Categories</option>
+                                <option value="technology">Technology & IT</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="business">Business & Finance</option>
+                                <option value="creative">Creative Arts</option>
+                                <option value="education">Education</option>
+                                <option value="engineering">Engineering</option>
+                                <option value="marketing">Marketing</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="salary-filter"><i class="fas fa-dollar-sign"></i> Salary:</label>
+                            <select id="salary-filter">
+                                <option value="all">Any Salary Range</option>
+                                <option value="entry">Entry Level ($30k-$50k)</option>
+                                <option value="mid">Mid Level ($50k-$80k)</option>
+                                <option value="senior">Senior Level ($80k-$120k)</option>
+                                <option value="executive">Executive ($120k+)</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="demand-filter"><i class="fas fa-chart-line"></i> Demand:</label>
+                            <select id="demand-filter">
+                                <option value="all">Any Demand Level</option>
+                                <option value="high">High Demand</option>
+                                <option value="medium">Medium Demand</option>
+                                <option value="growing">Growing Field</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="view-controls">
+                        <button id="grid-view" class="view-btn active" onclick="setView('grid')">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button id="list-view" class="view-btn" onclick="setView('list')">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="results-info">
+                    <span id="results-count">Loading careers...</span>
+                    <div class="sort-controls">
+                        <label for="sort-by">Sort by:</label>
+                        <select id="sort-by" onchange="sortCareers()">
+                            <option value="name">Name (A-Z)</option>
+                            <option value="salary-desc">Salary (High to Low)</option>
+                            <option value="salary-asc">Salary (Low to High)</option>
+                            <option value="demand">Demand Level</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="careers-container" class="careers-grid">
+                    <!-- Careers will be loaded here dynamically -->
+                    <div class="loading-spinner">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading career opportunities...</p>
+                    </div>
+                </div>
+
+                <div class="load-more-container">
+                    <button id="load-more" class="load-more-btn" onclick="loadMoreCareers()">
+                        <i class="fas fa-plus"></i> Load More Careers
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Career Detail Modal -->
+    <div id="career-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="career-modal-content">
+                <!-- Career details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container">
+        <footer class="footer" style="background: #34495e; color: white; padding: 2rem; text-align: center; margin-top: 4rem;">
+            <p>&copy; 2024 CareerAdvisor. Helping you find your perfect career path.</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/career.js"></script>
+</body>
+</html>

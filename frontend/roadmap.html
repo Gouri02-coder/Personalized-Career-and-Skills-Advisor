@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Path - Career Advisor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <main class="learning-path-container">
+        <section class="learning-path-hero">
+            <div class="container">
+                <h1>Your Personalized Learning Journey</h1>
+                <p>Follow step-by-step paths to master new skills and advance your career</p>
+                <div class="path-search">
+                    <input type="text" id="path-search" placeholder="Search learning paths...">
+                    <button onclick="searchPaths()">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="paths-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Popular Learning Paths</h2>
+                    <div class="path-filters">
+                        <select id="difficulty-filter">
+                            <option value="all">All Levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                        <select id="duration-filter">
+                            <option value="all">Any Duration</option>
+                            <option value="short">1-3 months</option>
+                            <option value="medium">3-6 months</option>
+                            <option value="long">6+ months</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="paths-container" class="paths-grid">
+                    <!-- Learning paths will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Tracking Section -->
+        <section class="progress-section">
+            <div class="container">
+                <h2>Your Learning Progress</h2>
+                <div class="progress-dashboard">
+                    <div class="progress-stats">
+                        <div class="stat-card">
+                            <h3>Paths Started</h3>
+                            <span class="stat-number" id="started-paths">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Paths Completed</h3>
+                            <span class="stat-number" id="completed-paths">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Total Hours</h3>
+                            <span class="stat-number" id="total-hours">0</span>
+                        </div>
+                    </div>
+                    <div class="current-paths" id="current-paths">
+                        <!-- Current active paths will be shown here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Path Detail Modal -->
+    <div class="path-detail-modal hidden" id="path-detail-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closePathModal()">×</button>
+            <div id="path-detail-content">
+                <!-- Path details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/roadmap.js"></script>
+</body>
+</html>

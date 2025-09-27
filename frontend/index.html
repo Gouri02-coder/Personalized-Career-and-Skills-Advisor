@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Path Advisor - Find Your Dream Career</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <main class="container">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Discover Your Perfect Career Path</h1>
+                <p>Take our smart assessment to find careers that match your skills, interests, and personality</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary btn-large" onclick="startQuiz()">Start Career Quiz</button>
+                    <button class="btn-outline btn-large" onclick="viewCareers()">Browse Careers</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="career-visual">🎯</div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2>How It Works</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Smart Assessment</h3>
+                    <p>Answer simple questions about your skills and preferences</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Personalized Matches</h3>
+                    <p>Get career recommendations tailored just for you</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛣️</div>
+                    <h3>Learning Roadmap</h3>
+                    <p>Receive a step-by-step plan to achieve your goals</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz-section" class="quiz-section hidden">
+            <h2>Career Assessment Quiz</h2>
+            <div class="quiz-container">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress" id="quiz-progress"></div>
+                    </div>
+                    <span id="quiz-status">Question 1 of 5</span>
+                </div>
+                <div class="quiz-content">
+                    <h3 id="quiz-question">What type of work environment do you prefer?</h3>
+                    <div class="quiz-options" id="quiz-options">
+                        <!-- Options will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="results-section" class="results-section hidden">
+            <h2>Your Career Matches</h2>
+            <div id="recommendations-container" class="recommendations-grid">
+                <!-- Results will be loaded by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    <div id="progress-widget"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/career.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/roadmap.js"></script>
+</body>
+</html>

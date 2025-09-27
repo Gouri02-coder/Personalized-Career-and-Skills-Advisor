@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Assessment Quiz - Career Advisor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Career Assessment Quiz</h1>
+            <p>Take our 5-minute quiz to discover careers that match your personality and skills</p>
+        </section>
+
+        <section class="quiz-section">
+            <div class="quiz-intro" id="quiz-intro">
+                <div class="intro-content">
+                    <h2>Ready to Find Your Perfect Career?</h2>
+                    <p>This quiz will help us understand your preferences, skills, and interests to recommend the best career paths for you.</p>
+                    <ul class="quiz-features">
+                        <li>✓ Only 5 simple questions</li>
+                        <li>✓ Personalized results</li>
+                        <li>✓ Actionable insights</li>
+                        <li>✓ Free forever</li>
+                    </ul>
+                    <button class="btn-primary btn-large" onclick="startQuiz()">Start Quiz Now</button>
+                </div>
+            </div>
+
+            <div class="quiz-container hidden" id="quiz-container">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress" id="quiz-progress"></div>
+                    </div>
+                    <span id="quiz-status">Question 1 of 5</span>
+                </div>
+                
+                <div class="quiz-content">
+                    <h3 id="quiz-question">What type of work environment do you prefer?</h3>
+                    <div class="quiz-options" id="quiz-options">
+                        <!-- Options will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-results hidden" id="quiz-results">
+                <h2>Your Career Matches</h2>
+                <div id="recommendations-container" class="recommendations-grid">
+                    <!-- Results will be loaded here -->
+                </div>
+                <div class="results-actions">
+                    <button class="btn-outline" onclick="restartQuiz()">Take Quiz Again</button>
+                    <button class="btn-primary" onclick="viewDetailedAnalysis()">View Detailed Analysis</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/career.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

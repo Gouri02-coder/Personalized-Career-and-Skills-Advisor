@@ -1,0 +1,34 @@
+<h2>Dashboard</h2>
+<div id="welcome"></div>
+<button onclick="logout()">Logout</button>
+
+<script>
+async function loadDashboard() {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    alert("Not logged in!");
+    window.location.href = "login.html";
+    return;
+  }
+
+  const res = await fetch("http://localhost:5000/dashboard", {
+    headers: { "Authorization": "Bearer " + token }
+  });
+
+  const data = await res.json();
+  if (data.message.includes("Welcome")) {
+    document.getElementById("welcome").innerText = data.message;
+  } else {
+    alert("Session expired, login again!");
+    localStorage.removeItem("token");
+    window.location.href = "login.html";
+  }
+}
+
+function logout() {
+  localStorage.removeItem("token");
+  window.location.href = "login.html";
+}
+
+loadDashboard();
+</script>

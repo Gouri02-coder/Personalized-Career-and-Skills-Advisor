@@ -1,0 +1,69 @@
+{
+  "careers": [
+    {
+      "id": "frontend-developer",
+      "title": "Frontend Developer",
+      "description": "Build user-facing web applications using HTML, CSS, and JavaScript",
+      "field": "Web Development",
+      "requiredSkills": ["html", "css", "javascript", "react", "responsive design"],
+      "recommendedSkills": ["typescript", "vue", "angular", "ui/ux design"],
+      "salaryRange": {"min": 50000, "max": 120000},
+      "education": "Bootcamp or Computer Science degree",
+      "demand": "High",
+      "matchingAnswers": ["A", "A", "A", "A", "A"],
+      "growth": "15% (Faster than average)"
+    },
+    {
+      "id": "backend-developer",
+      "title": "Backend Developer",
+      "description": "Develop server-side logic and database management systems",
+      "field": "Software Engineering",
+      "requiredSkills": ["node.js", "python", "java", "sql", "apis"],
+      "recommendedSkills": ["docker", "aws", "microservices", "system design"],
+      "salaryRange": {"min": 60000, "max": 130000},
+      "education": "Computer Science degree",
+      "demand": "High",
+      "matchingAnswers": ["A", "A", "B", "A", "A"],
+      "growth": "12% (Faster than average)"
+    },
+    {
+      "id": "data-scientist",
+      "title": "Data Scientist",
+      "description": "Extract insights from complex data using statistical analysis and machine learning",
+      "field": "Data Science",
+      "requiredSkills": ["python", "statistics", "machine learning", "sql", "data visualization"],
+      "recommendedSkills": ["r", "tensorflow", "big data", "cloud computing"],
+      "salaryRange": {"min": 70000, "max": 150000},
+      "education": "Master's in Data Science or related field",
+      "demand": "Very High",
+      "matchingAnswers": ["B", "B", "B", "B", "B"],
+      "growth": "22% (Much faster than average)"
+    },
+    {
+      "id": "ux-designer",
+      "title": "UX Designer",
+      "description": "Create intuitive and engaging user experiences for digital products",
+      "field": "Design",
+      "requiredSkills": ["user research", "wireframing", "prototyping", "ui design", "usability testing"],
+      "recommendedSkills": ["figma", "adobe xd", "interaction design", "user psychology"],
+      "salaryRange": {"min": 55000, "max": 110000},
+      "education": "Design degree or Bootcamp",
+      "demand": "High",
+      "matchingAnswers": ["C", "D", "C", "D", "D"],
+      "growth": "13% (Faster than average)"
+    },
+    {
+      "id": "devops-engineer",
+      "title": "DevOps Engineer",
+      "description": "Bridge development and operations through automation and infrastructure management",
+      "field": "IT Operations",
+      "requiredSkills": ["docker", "kubernetes", "aws", "ci/cd", "linux"],
+      "recommendedSkills": ["terraform", "jenkins", "monitoring", "cloud security"],
+      "salaryRange": {"min": 70000, "max": 140000},
+      "education": "Computer Science or IT degree",
+      "demand": "Very High",
+      "matchingAnswers": ["A", "A", "A", "B", "A"],
+      "growth": "18% (Much faster than average)"
+    }
+  ]
+}
